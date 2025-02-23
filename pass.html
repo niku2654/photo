@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected</title>
+    <link rel="stylesheet" href="CSS/styles.css">  <!-- External CSS -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Special Photo Album</h1>
+        <p>Enter the password to access my album!</p>
+    </header>
+
+    <!-- Password Form -->
+    <div class="password-container">
+        <form id="passwordForm" onsubmit="return validatePassword()">
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <footer>
+        <p>Created with love & care</p>
+    </footer>
+    <script src="pass.js"></script> <!-- External JS -->
+</body>
+</html>

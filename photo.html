@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo Album</title>
+    <link rel="stylesheet" href="styles.css">  <!-- External CSS -->
+</head>
+<body>
+
+    <header>
+        <h1>My Photo Album</h1>
+        <p>Sharing memories that mean a lot!</p>
+    </header>
+
+    <div class="album">
+        <div class="photo-card" onclick="openLightbox('image1')">
+            <img src="Images/v1.jpg" alt="Memory 1" id="image1">
+            <div class="description">
+                <h3>Special Moment 1</h3>
+                <p>Caption describing the special memory with a smile.</p>
+            </div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox('image2')">
+            <img src="Images/v7.jpg" alt="Memory 2" id="image2">
+            <div class="description">
+                <h3>Special Moment 2</h3>
+                <p>Another amazing memory with a little story.</p>
+            </div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox('image3')">
+            <img src="Images/v4.jpg" alt="Memory 3" id="image3">
+            <div class="description">
+                <h3>Special Moment 3</h3>
+                <p>A fun experience that I'll always cherish!</p>
+            </div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox('image4')">
+            <img src="Images/v3.jpg" alt="Memory 4" id="image4">
+            <div class="description">
+                <h3>Special Moment 4</h3>
+                <p>A wonderful day spent with loved ones.</p>
+            </div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox('image5')">
+            <img src="Images/v11.jpg" alt="Memory 5" id="image5">
+            <div class="description">
+                <h3>Special Moment 5</h3>
+                <p>A relaxing day at the beach.</p>
+            </div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox('image6')">
+            <img src="Images/v10 (1).jpg" alt="Memory 6" id="image6">
+            <div class="description">
+                <h3>Special Moment 6</h3>
+                <p>Adventure in the mountains.</p>
+            </div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox('image7')">
+            <img src="Images/Starry Camping Night.jpeg" alt="Memory 7" id="image7">
+            <div class="description">
+                <h3>Special Moment 7</h3>
+                <p>Camping under the stars.</p>
+            </div>
+        </div>
+
+        <div class="photo-card" onclick="openLightbox('image8')">
+            <img src="Images/v8.png" alt="Memory 8" id="image8">
+            <div class="description">
+                <h3>Special Moment 8</h3>
+                <p>A magical evening with family.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <img id="lightboxImage" src="" alt="Enlarged image">
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>Created with love & care</p>
+    </footer>
+
+    <script src="JS/script.js"></script>  <!-- External JS -->
+</body>
+</html>

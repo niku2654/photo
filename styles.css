@@ -1,0 +1,273 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #ff5c8d;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Album styling */
+.album {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual photo card */
+.photo-card {
+    position: relative;
+    border: 2px solid #ff5c8d;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: slideIn 0.5s ease-out;
+}
+
+.photo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.photo-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ff5c8d;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Description styling */
+.photo-card .description {
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.photo-card .description h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.photo-card .description p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Lightbox styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff5c8d;
+    color: white;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* General styles for the album */
+
+
+
+
+
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.05);
+}
+
+.description {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.description h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Lightbox styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightboxImage {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .album {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .album {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .album {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+
+    .description h3 {
+        font-size: 14px;
+    }
+
+    .description p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .prev, .next {
+        font-size: 25px;
+    }
+
+    .close {
+        font-size: 30px;
+    }
+
+    #lightboxImage {
+        max-width: 100%;
+        max-height: 70%;
+    }
+}
+
+
+
+
+
+
+
